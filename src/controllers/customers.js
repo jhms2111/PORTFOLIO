@@ -12,21 +12,17 @@ function index(req, res) {
 async function add(req, res) {
     const {
         name,
-        phone,
+        age,
         email,
-        mensaje,
         password,
-        
     } = req.body
 
     const passwordCrypto = await crypto(password)
 
     const register = new CustomersModel({
         name,
-        phone,
+        age,
         email,
-        mensaje,
-        password,
         password: passwordCrypto,
     })
 
@@ -60,9 +56,8 @@ async function formEdit(req, res) {
 async function edit(req, res) {
     const {
         name,
-        phone,
+        age,
         email,
-        mensaje,
     } = req.body
 
    const { id } = req.params
@@ -70,10 +65,8 @@ async function edit(req, res) {
    const user = await CustomersModel.findById(id)
 
    user.name = name
-   user.phone = phone
+   user.age = age
    user.email = email 
-   user.mensaje = mensaje
-
 
    user.save()
    

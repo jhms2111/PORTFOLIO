@@ -20,20 +20,19 @@
 
 
    <form action="/edit/<%= user._id %>" method="POST">
-      <div><label for="">Nombre</label>
-         <input type="text/css" name="name" placeholder="Escribe tu nombre" value="<%= user.name %>">
+      <div><label for="">Nome</label>
+         <input type="text" name="name" placeholder="Digite o seu nome " value="<%= user.name %>">
       </div>
-      <div><label for="">Teléfono</label>
-         <input type="text/css" name="phone" placeholder="Escribe tu teléfono"value="<%= user.phone %>">
+      <div><label for="">Idade</label>
+         <input type="text" name="age" placeholder="Digite a sua idade " value="<%= user.age %>">
       </div>
       <div><label for="">E-mail</label>
-         <input type="text/css" name="email" placeholder="Escribe tu teléfono" value="<%= user.email %>">
-      </div>
-      <div><label for="">Mensaje</label>
-         <input type="text/css" name="mensaje" placeholder="Digite o seu email " value="<%= user.mensaje %>">
+         <input type="text" name="email" placeholder="Digite o seu email " value="<%= user.email %>">
       </div>
       <button type="submit">Editar</button>
    </form>
+ 
+ 
      </div>
  
 

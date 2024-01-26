@@ -20,11 +20,7 @@ router.post('/edit/:id', CustomersController.edit)
 //remover
 router.get('/remove/:id', CustomersController.remove)
 
-// Nova rota para a página de contato
-router.get('/contact', (req, res) => {
-    // Lógica para a página de contato, renderizando um template, por exemplo
-    res.render('contact'); // Supondo que você use um mecanismo de template como EJS, Pug, etc.
-  });
+
 
 
 module.exports = router

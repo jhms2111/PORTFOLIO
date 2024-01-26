@@ -4,68 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <base href="/">
 
     <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
-<section id="cadastro" class="cadastro">
+    
+    <h1><%= title %></h1>
 
-   <%- include('partials/navbar.ejs')%>
-<br><br>
+    <%- include('partials/navbar.ejs')%>
+
     <%  if (typeof message !== 'undefined') { %>
     <%= message %> 
     <% } %> 
-<br><br><br>
 
-    <div>
-        <h2>Déjame tus dados y me pondré en contacto contigo</h2>
-    
 
-        <form id="myForm" action="register/add" method="POST">
-       <div  class="personal-data" action="register/add" method="POST">
-         <div class="input-wrapper">
-            <label>Nombre:</label>
-            <input type="text" id="nombre"  name="name" placeholder="Escribe tu nombre">
-         </div>
-         <div class="input-wrapper">
-            <label>E-mail:</label>
-            <input type="text" id="email" name="email" placeholder="Escribe tu E-mail">
-         </div>
-         <div class="input-wrapper">
-            <label>Teléfono:</label>
-            <input type="text" id="telefono" name="phone" placeholder="Escribe tu teléfono">
-         </div>
-         <div class="input-wrapper">
-            <label>Contraseña:</label>
-            <input type="text" name="password" placeholder="Digite a sua senha">
-         </div>
-         <div class="input-wrapper">
-            <label>Tipo de servicio:</label>
-            <select id="tipoServicio">
-                <option value="">-- Selecione --</option>
-                <option value="Programador Frontend">Programador Frontend</option>
-                <option value="Programador backend">Programador backend</option>
-                <option value="Programador Full stack">Programador Full stack</option>
-            </select>
-         </div>
+   <form action="/register/add" method="POST">
+      <div><label for="">Nome</label>
+         <input type="text" name="name" placeholder="Digite o seu nome ">
       </div>
-
-      <div class="mensaje">
-      <label >Mensaje:</label>
-      <textarea name="mensaje" placeholder="Por favor, déjame algunas informaciones acerca del trabajo." ></textarea>
+      <div><label for="">Idade</label>
+         <input type="text" name="age" placeholder="Digite a sua idade ">
       </div>
-
+      <div><label for="">E-mail</label>
+         <input type="text" name="email" placeholder="Digite o seu email ">
+      </div>
+      <div><label for="">Senha</label>
+         <input type="text" name="password" placeholder="Digite a sua senha ">
+      </div>
       <button type="submit">Cadastrar</button>
-
-      
-    </form>
-
-
-    </div>
-
-   </section>
+   </form>
+ 
+ 
+     </div>
+ 
 
    <script src="js/main.js"></script>
 
